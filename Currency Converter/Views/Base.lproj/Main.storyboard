@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Currency Converter-->
+        <!--💰 Currency Converter 💰-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="CurrencyListViewController" id="BYZ-38-t0r" customClass="CurrencyListViewController" customModule="Currency_Converter" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,7 +60,7 @@
                             <constraint firstItem="uVm-I0-QNK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="q7w-7A-EEH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Currency Converter" id="28v-mO-SEw"/>
+                    <navigationItem key="navigationItem" title="💰 Currency Converter 💰" id="28v-mO-SEw"/>
                     <connections>
                         <outlet property="currencyListTable" destination="uVm-I0-QNK" id="crH-ks-Xjr"/>
                     </connections>
