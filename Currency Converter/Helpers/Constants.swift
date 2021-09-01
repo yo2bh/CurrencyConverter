@@ -22,6 +22,7 @@ struct AppConstants {
   static let errorTitle = "Error"
   static let invalidURLString = "Invalid URL String."
   static let invalidAmount = "Invalid amount, please enter the valid amount."
+  static let somethingWentWrong = "Something went wrong !!!\nPlease try after sometime."
   
   // MARK: - VC Id's
   static let unListedVC = "UnlistedCurrencyConverterVC"

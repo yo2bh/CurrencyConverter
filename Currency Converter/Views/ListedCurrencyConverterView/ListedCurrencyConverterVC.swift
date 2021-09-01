@@ -38,6 +38,7 @@ class ListedCurrencyConverterVC: UIViewController {
        let amount = Double(amountString), amount > 0 {
       enteredAmount = amount
       activityIndicator.startAnimating()
+      // Use "USD" in place of selectedCurrency to get the response from server
       quotesViewModel.fetchQuotes(source: selectedCurrency, success: handlerSuccess(_:), failure: handleFailure(_:))
     } else {
       AlertView.show(title: AppConstants.errorTitle, message: AppConstants.invalidAmount)
@@ -49,6 +50,7 @@ class ListedCurrencyConverterVC: UIViewController {
       DispatchQueue.main.async {
         self.activityIndicator.stopAnimating()
         self.exchangeRateTableView.isHidden = false
+        self.amountTextField.resignFirstResponder()
         self.exchangeRateTableView.reloadData()
       }
     }

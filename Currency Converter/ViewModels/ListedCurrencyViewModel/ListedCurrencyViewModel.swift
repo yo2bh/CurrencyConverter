@@ -24,7 +24,7 @@ class ListedCurrencyViewModel {
           success(response.success)
         } catch {
           debugPrint(error.localizedDescription)
-          failure(error.localizedDescription)
+          failure(AppConstants.somethingWentWrong)
         }
       } else if let errorMessage = error {
         failure(errorMessage)
