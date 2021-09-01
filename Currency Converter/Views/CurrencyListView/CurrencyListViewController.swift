@@ -39,7 +39,10 @@ class CurrencyListViewController: UIViewController {
   }
   
   func handleFailure(_ errorMessage: String) {
-    AlertView.show(title: AppConstants.errorTitle, message: errorMessage)
+    DispatchQueue.main.async {
+      self.activityIndicator.stopAnimating()
+      AlertView.show(title: AppConstants.errorTitle, message: errorMessage)
+    }
   }
 }
 
@@ -73,8 +76,8 @@ extension CurrencyListViewController: UITableViewDelegate, UITableViewDataSource
       self.navigationController?.pushViewController(vc, animated: true)
     } else if let vc = self.storyboard?.instantiateViewController(identifier: AppConstants.listedVC) as? ListedCurrencyConverterVC {
       let selectedRow = Array(currencyList)[row]
-      let selectedCurrency = selectedRow.value
-      let selectedCountryName = selectedRow.key
+      let selectedCountryName = selectedRow.value
+      let selectedCurrency = selectedRow.key
       vc.selectedCurrency = selectedCurrency
       vc.selectedCountryName = selectedCountryName
       self.navigationController?.pushViewController(vc, animated: true)

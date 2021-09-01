@@ -76,13 +76,81 @@
                     <view key="view" contentMode="scaleToFill" id="f9s-qt-Rsa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the amount to be convert" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="28U-IU-gPB">
+                                <rect key="frame" x="20" y="94" width="234" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mo0-Vz-6Ry">
+                                <rect key="frame" x="274" y="96" width="120" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Xul-c1-AMu"/>
+                                </constraints>
+                                <state key="normal" title="Exchange Rate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exchangeRateButtonPressed" destination="2e6-aX-kTh" eventType="touchUpInside" id="UOa-Jh-qGH"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nm7-kJ-wlg">
+                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listedCurrencyCell" textLabel="sYh-NH-F7Q" detailTextLabel="kvJ-mZ-Mqu" style="IBUITableViewCellStyleValue1" id="wJt-Bb-zG4">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wJt-Bb-zG4" id="4NK-8S-oFT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sYh-NH-F7Q">
+                                                    <rect key="frame" x="20" y="12" width="33" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kvJ-mZ-Mqu">
+                                                    <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2e6-aX-kTh" id="yqP-tl-NPC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="E1x-bd-VRf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E1x-bd-VRf" firstAttribute="bottom" secondItem="nm7-kJ-wlg" secondAttribute="bottom" id="8qs-1z-2Rt"/>
+                            <constraint firstItem="E1x-bd-VRf" firstAttribute="trailing" secondItem="nm7-kJ-wlg" secondAttribute="trailing" id="Cev-ZR-ymj"/>
+                            <constraint firstItem="nm7-kJ-wlg" firstAttribute="leading" secondItem="E1x-bd-VRf" secondAttribute="leading" id="E1P-QH-zCc"/>
+                            <constraint firstItem="28U-IU-gPB" firstAttribute="top" secondItem="E1x-bd-VRf" secondAttribute="top" constant="50" id="V5f-VV-5DX"/>
+                            <constraint firstItem="Mo0-Vz-6Ry" firstAttribute="centerY" secondItem="28U-IU-gPB" secondAttribute="centerY" id="YTa-4t-2kr"/>
+                            <constraint firstItem="Mo0-Vz-6Ry" firstAttribute="leading" secondItem="28U-IU-gPB" secondAttribute="trailing" constant="20" id="g9s-SG-Che"/>
+                            <constraint firstItem="E1x-bd-VRf" firstAttribute="trailing" secondItem="Mo0-Vz-6Ry" secondAttribute="trailing" constant="20" id="jsT-yS-5r4"/>
+                            <constraint firstItem="28U-IU-gPB" firstAttribute="leading" secondItem="E1x-bd-VRf" secondAttribute="leading" constant="20" id="kNe-PG-uUn"/>
+                            <constraint firstItem="nm7-kJ-wlg" firstAttribute="top" secondItem="28U-IU-gPB" secondAttribute="bottom" constant="20" id="myv-8G-ubq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="28U-IU-gPB" id="Qxb-n8-aI6"/>
+                        <outlet property="exchangeRateTableView" destination="nm7-kJ-wlg" id="iSy-U9-kRE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7BQ-6H-W2j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1672" y="121"/>
+            <point key="canvasLocation" x="1671.0144927536232" y="120.53571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ozU-9A-vw5">
@@ -119,6 +187,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
