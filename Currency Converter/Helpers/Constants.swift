@@ -20,12 +20,14 @@ struct AppConstants {
   static let openingParenthesis = "("
   static let closingParenthesis = ")"
   static let underscoreString = "_"
+  static let equalToString = "="
   
   // MARK: - Errors
   static let errorTitle = "Error"
   static let invalidURLString = "Invalid URL String."
   static let invalidAmount = "Invalid amount, please enter the valid amount."
   static let somethingWentWrong = "Something went wrong !!!\nPlease try after sometime."
+  static let invalidCurrency = "Invalid currency, please enter the valid currency."
   
   // MARK: - VC Id's
   static let unListedVC = "UnlistedCurrencyConverterVC"

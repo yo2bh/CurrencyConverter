@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -77,17 +78,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the amount to be convert" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="28U-IU-gPB">
-                                <rect key="frame" x="20" y="94" width="234" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the amount to be convert" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="28U-IU-gPB">
+                                <rect key="frame" x="20" y="94" width="252" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mo0-Vz-6Ry">
-                                <rect key="frame" x="274" y="96" width="120" height="30"/>
+                                <rect key="frame" x="292" y="96" width="102" height="30"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="Xul-c1-AMu"/>
-                                </constraints>
                                 <state key="normal" title="Exchange Rate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -179,29 +177,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="44Z-km-k4k">
-                                <rect key="frame" x="20" y="94" width="374" height="88"/>
+                                <rect key="frame" x="20" y="94" width="374" height="142"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Source Currency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AI5-jO-BBB">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oTe-oj-08W">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Source Currency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AI5-jO-BBB">
+                                        <rect key="frame" x="0.0" y="54" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination Currency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rv8-mD-RH5">
-                                        <rect key="frame" x="0.0" y="54" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="108" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6u-jY-atP">
+                                <rect key="frame" x="147" y="256" width="120" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="RFN-hR-Ham"/>
+                                </constraints>
+                                <state key="normal" title="Exchange Rate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exchangeRateButtonPressed" destination="MWG-l9-cd6" eventType="touchUpInside" id="Ytp-Vg-WOT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVV-ft-WD5">
+                                <rect key="frame" x="20" y="306" width="85.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fX9-NR-Q4X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="C6u-jY-atP" firstAttribute="top" secondItem="Rv8-mD-RH5" secondAttribute="bottom" constant="20" id="8y6-as-HhN"/>
+                            <constraint firstItem="kVV-ft-WD5" firstAttribute="leading" secondItem="Rv8-mD-RH5" secondAttribute="leading" id="BJy-NW-h57"/>
                             <constraint firstItem="44Z-km-k4k" firstAttribute="leading" secondItem="fX9-NR-Q4X" secondAttribute="leading" constant="20" id="Rqk-5j-Bkc"/>
                             <constraint firstItem="fX9-NR-Q4X" firstAttribute="trailing" secondItem="44Z-km-k4k" secondAttribute="trailing" constant="20" id="S5G-5n-G1f"/>
                             <constraint firstItem="44Z-km-k4k" firstAttribute="top" secondItem="fX9-NR-Q4X" secondAttribute="top" constant="50" id="U5p-n4-VOF"/>
+                            <constraint firstItem="kVV-ft-WD5" firstAttribute="top" secondItem="C6u-jY-atP" secondAttribute="bottom" constant="20" id="X0u-d8-8yk"/>
+                            <constraint firstItem="fX9-NR-Q4X" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kVV-ft-WD5" secondAttribute="trailing" symbolic="YES" id="ZAi-eI-Wx3"/>
+                            <constraint firstItem="C6u-jY-atP" firstAttribute="centerX" secondItem="fX9-NR-Q4X" secondAttribute="centerX" id="cIl-H9-p7d"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="oTe-oj-08W" id="CMn-3I-2Bi"/>
+                        <outlet property="conversionLabel" destination="kVV-ft-WD5" id="gkD-00-SYA"/>
+                        <outlet property="destinationCurrencyTextField" destination="Rv8-mD-RH5" id="wH9-cH-XRT"/>
+                        <outlet property="sourceCurrencyTextField" destination="AI5-jO-BBB" id="CZL-p5-R3K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQr-zB-ddK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,6 +242,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

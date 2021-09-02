@@ -29,6 +29,8 @@
 		D1B54F4B26E115DF0058C481 /* MockCurrencyListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B54F4A26E115DF0058C481 /* MockCurrencyListVM.swift */; };
 		D1B54F5526E1182B0058C481 /* ListedCurrencyConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B54F5426E1182B0058C481 /* ListedCurrencyConverterTests.swift */; };
 		D1B54F5D26E11A550058C481 /* MockListCurrencyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B54F5C26E11A550058C481 /* MockListCurrencyVM.swift */; };
+		D1DA2EA826E12F5E00FFBA36 /* UnlistedCurrencyConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DA2EA726E12F5E00FFBA36 /* UnlistedCurrencyConverterTests.swift */; };
+		D1DA2EB026E1300800FFBA36 /* MockUnlistedCurrencyConverterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DA2EAF26E1300800FFBA36 /* MockUnlistedCurrencyConverterVM.swift */; };
 		D1E60CD926E0E42600F4E33C /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E60CD826E0E42600F4E33C /* FileManager.swift */; };
 		D1E60CE826E0FFFB00F4E33C /* UnlistedCurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E60CE726E0FFFB00F4E33C /* UnlistedCurrencyViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,8 @@
 		D1B54F4A26E115DF0058C481 /* MockCurrencyListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCurrencyListVM.swift; sourceTree = "<group>"; };
 		D1B54F5426E1182B0058C481 /* ListedCurrencyConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedCurrencyConverterTests.swift; sourceTree = "<group>"; };
 		D1B54F5C26E11A550058C481 /* MockListCurrencyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListCurrencyVM.swift; sourceTree = "<group>"; };
+		D1DA2EA726E12F5E00FFBA36 /* UnlistedCurrencyConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlistedCurrencyConverterTests.swift; sourceTree = "<group>"; };
+		D1DA2EAF26E1300800FFBA36 /* MockUnlistedCurrencyConverterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUnlistedCurrencyConverterVM.swift; sourceTree = "<group>"; };
 		D1E60CD826E0E42600F4E33C /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		D1E60CE726E0FFFB00F4E33C /* UnlistedCurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlistedCurrencyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +149,7 @@
 		3ABBB59C26DC97DE00D585CC /* Currency ConverterTests */ = {
 			isa = PBXGroup;
 			children = (
+				D1DA2EA626E12F4000FFBA36 /* UnlistedCurrencyConverter */,
 				D1B54F5326E1180E0058C481 /* ListedCurrencyConverter */,
 				D1B54F4F26E117D10058C481 /* CurrencyList */,
 				3ABBB59F26DC97DE00D585CC /* Info.plist */,
@@ -302,6 +307,15 @@
 				D1B54F5C26E11A550058C481 /* MockListCurrencyVM.swift */,
 			);
 			path = ListedCurrencyConverter;
+			sourceTree = "<group>";
+		};
+		D1DA2EA626E12F4000FFBA36 /* UnlistedCurrencyConverter */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA2EA726E12F5E00FFBA36 /* UnlistedCurrencyConverterTests.swift */,
+				D1DA2EAF26E1300800FFBA36 /* MockUnlistedCurrencyConverterVM.swift */,
+			);
+			path = UnlistedCurrencyConverter;
 			sourceTree = "<group>";
 		};
 		D1E60CE626E0FFED00F4E33C /* UnlistedCurrencyViewModel */ = {
@@ -465,8 +479,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1DA2EB026E1300800FFBA36 /* MockUnlistedCurrencyConverterVM.swift in Sources */,
 				3ABBB59E26DC97DE00D585CC /* CurrencyListTests.swift in Sources */,
 				D1B54F5526E1182B0058C481 /* ListedCurrencyConverterTests.swift in Sources */,
+				D1DA2EA826E12F5E00FFBA36 /* UnlistedCurrencyConverterTests.swift in Sources */,
 				D1B54F4B26E115DF0058C481 /* MockCurrencyListVM.swift in Sources */,
 				D1B54F5D26E11A550058C481 /* MockListCurrencyVM.swift in Sources */,
 			);
