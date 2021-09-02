@@ -19,27 +19,30 @@ This is iOS Currency Converter App where Exchange rates are fetched from: https:
 6. Rates are persisted locally in file and refreshed after every 30 minutes.
 7. Written the unit test cases.
 
-# Application Flow
-1. Launch screen -
-![Screenshot](Screenshots/01.png)
-
-2. Available currency list screen - 
-![Screenshot](Screenshots/02.png)
-
-3. Select currency from list to get the exchange rates for selected currency.
-![Screenshot](Screenshots/03.png)
-
-**NOTE - Currently I am using the free plan, hence not getting exchange rate rather currency except "USD". 
+# Note
+**Currently I am using the free plan, hence not getting exchange rate rather currency except "USD". 
 For testing you can set the selectedCurrency in ListedCurrencyConverterVC.swift file to "USD"**
 
+# Application Flow
+1. Launch screen -
+<img src="Screenshots/01.png" width="400" height="700">
+
+2. Available currency list screen - 
+<img src="Screenshots/02.png" width="400" height="700">
+
+3. Select currency from list to get the exchange rates for selected currency.
+<img src="Screenshots/03.png" width="400" height="700">
+
 4. Save the exchanges rates in file and refresh the exchange rate after 30 minutes.
-![Screenshot](Screenshots/04.png)
+<img src="Screenshots/04.png" width="400" height="700">
 
 5. Select the **Other currency** option from buttom of the currency list to get the source to destionation currency conversion.
-![Screenshot](Screenshots/05.png)
+<img src="Screenshots/05.png" width="400" height="700">
 
 6. Enter the amount, source and destination currency code for conversion.
-![Screenshot](Screenshots/06.png)
+<img src="Screenshots/06.png" width="400" height="700">
 
 7. Holla !!! you will get the conversion of currencies.
-![Screenshot](Screenshots/07.png)
+<img src="Screenshots/07.png" width="400" height="700"> 
+
+# Thank you !!!
