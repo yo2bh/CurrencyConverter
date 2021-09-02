@@ -177,13 +177,35 @@
                     <view key="view" contentMode="scaleToFill" id="8pZ-xd-xP7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="44Z-km-k4k">
+                                <rect key="frame" x="20" y="94" width="374" height="88"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Source Currency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AI5-jO-BBB">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination Currency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rv8-mD-RH5">
+                                        <rect key="frame" x="0.0" y="54" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fX9-NR-Q4X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="44Z-km-k4k" firstAttribute="leading" secondItem="fX9-NR-Q4X" secondAttribute="leading" constant="20" id="Rqk-5j-Bkc"/>
+                            <constraint firstItem="fX9-NR-Q4X" firstAttribute="trailing" secondItem="44Z-km-k4k" secondAttribute="trailing" constant="20" id="S5G-5n-G1f"/>
+                            <constraint firstItem="44Z-km-k4k" firstAttribute="top" secondItem="fX9-NR-Q4X" secondAttribute="top" constant="50" id="U5p-n4-VOF"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQr-zB-ddK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2342" y="121"/>
+            <point key="canvasLocation" x="2339.130434782609" y="120.53571428571428"/>
         </scene>
     </scenes>
     <resources>

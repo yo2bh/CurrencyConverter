@@ -11,12 +11,15 @@ struct AppConstants {
   // MARK: - API URLs
   static let currencyListURL = "http://api.currencylayer.com/list?access_key=c485b7876cc17accc56b819c679d1246"
   static let sourceSwitchingURL = "http://api.currencylayer.com/live?access_key=c485b7876cc17accc56b819c679d1246&source="
+  static let currencyConvertURL = "https://free.currconv.com/api/v7/convert?q="
+  static let apiKey = "&compact=ultra&apiKey=3d829c238a670ef4b802"
 
   // MARK: - Defaults
   static let emptyString = ""
   static let singleSpaceString = " "
   static let openingParenthesis = "("
   static let closingParenthesis = ")"
+  static let underscoreString = "_"
   
   // MARK: - Errors
   static let errorTitle = "Error"
