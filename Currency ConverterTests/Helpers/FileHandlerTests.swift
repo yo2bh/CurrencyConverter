@@ -23,8 +23,10 @@ class FileHandlerTests: XCTestCase {
     // Test failure case
     let data = FileHandler.shared.readFile("Abc")
     XCTAssertNil(data)
+    // Write data in file
+    FileHandler.shared.writeFile("Quotes", populateFileData())
     // Test success case
-    let fileData = FileHandler.shared.readFile("ExchangeRate")
+    let fileData = FileHandler.shared.readFile("Quotes")
     XCTAssert(fileData != nil)
   }
   
