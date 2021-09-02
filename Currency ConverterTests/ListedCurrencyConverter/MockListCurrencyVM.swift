@@ -12,7 +12,8 @@ class MockListedCurrencyVM: ListedCurrencyViewModel {
   
   var isSuccess: Bool!
   
-  override func fetchQuotes(source: String,
+  override func fetchQuotes(_ amount: Double,
+                            _ source: String,
                             success: @escaping(_ status: Bool) -> Void,
                             failure: @escaping(_ errorMessage: String) -> Void) {
     if isSuccess {

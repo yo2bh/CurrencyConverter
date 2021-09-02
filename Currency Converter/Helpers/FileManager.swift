@@ -61,7 +61,6 @@ final class FileHandler {
         debugPrint("Unable to fetch file modification details - \(error.localizedDescription)")
       }
     }
-    
     return nil
   }
 }

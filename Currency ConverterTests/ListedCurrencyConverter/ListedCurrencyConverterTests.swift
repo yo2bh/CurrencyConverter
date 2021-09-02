@@ -37,14 +37,14 @@ class ListedCurrencyConverterTests: XCTestCase {
     let mockListedCurrencyVM = MockListedCurrencyVM()
     // Test Success case
     mockListedCurrencyVM.isSuccess = true
-    mockListedCurrencyVM.fetchQuotes(source: "USD") { (response) in
+    mockListedCurrencyVM.fetchQuotes(102.25, "USD") { (response) in
       XCTAssertTrue(response)
     } failure: { _ in
     }
     
     // Test failure case
     mockListedCurrencyVM.isSuccess = false
-    mockListedCurrencyVM.fetchQuotes(source: "USD") { _ in
+    mockListedCurrencyVM.fetchQuotes(0, "USD") { _ in
     } failure: { (error) in
       XCTAssertEqual(error, AppConstants.somethingWentWrong)
     }
