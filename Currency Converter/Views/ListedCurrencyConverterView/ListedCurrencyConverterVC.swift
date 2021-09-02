@@ -16,7 +16,7 @@ class ListedCurrencyConverterVC: UIViewController {
   var selectedCurrency: String = AppConstants.emptyString
   var selectedCountryName: String = AppConstants.emptyString
   private var activityIndicator: UIActivityIndicatorView!
-  var enteredAmount: Double = 1.0
+  private var enteredAmount: Double = 1.0
   
   // MARK: - Constants
   let quotesViewModel = ListedCurrencyViewModel()
@@ -34,12 +34,11 @@ class ListedCurrencyConverterVC: UIViewController {
   }
   
   @IBAction func exchangeRateButtonPressed() {
-    if let amountString = amountTextField.text,
-       let amount = Double(amountString), amount > 0 {
+    if let amount = getAmount() {
       enteredAmount = amount
       activityIndicator.startAnimating()
       // Use "USD" in place of selectedCurrency to get the response from server
-      quotesViewModel.fetchQuotes(source: selectedCurrency, success: handlerSuccess(_:), failure: handleFailure(_:))
+      quotesViewModel.fetchQuotes(amount, selectedCurrency, success: handlerSuccess(_:), failure: handleFailure(_:))
     } else {
       AlertView.show(title: AppConstants.errorTitle, message: AppConstants.invalidAmount)
     }
@@ -61,6 +60,14 @@ class ListedCurrencyConverterVC: UIViewController {
       self.activityIndicator.stopAnimating()
       AlertView.show(title: AppConstants.errorTitle, message: errorMessage)
     }
+  }
+  
+  func getAmount() -> Double? {
+    if let amountString = amountTextField.text,
+       let amount = Double(amountString) {
+      return amount
+    }
+    return nil
   }
 }
 

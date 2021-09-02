@@ -15,11 +15,11 @@ class UnlistedCurrencyConverterViewModel {
                        success: @escaping(_ status: Bool, _ exchangeRate: Double?) -> Void,
                        failure: @escaping(_ error: String) -> Void) {
     // Validate amount
-    if !validateAmount(amount) {
+    if !Validator.validateAmount(amount) {
       failure(AppConstants.invalidAmount)
     }
     // Validate from and to Currency
-    if !validateCurrency(fromCurrency) || !validateCurrency(toCurrency) {
+    if !Validator.validateCurrency(fromCurrency) || !Validator.validateCurrency(toCurrency) {
       failure(AppConstants.invalidCurrency)
     }
     
@@ -39,13 +39,5 @@ class UnlistedCurrencyConverterViewModel {
         failure(errorMessage)
       }
     }
-  }
-  
-  private func validateAmount(_ amount: Double) -> Bool {
-    return amount > 0
-  }
-  
-  private func validateCurrency(_ currency: String) -> Bool {
-    return currency.count == 3
   }
 }

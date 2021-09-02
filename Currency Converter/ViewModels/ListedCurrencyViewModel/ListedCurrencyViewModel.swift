@@ -12,9 +12,15 @@ class ListedCurrencyViewModel {
   private var quotes = [String: Double]()
   
   // MARK: - Methods
-  func fetchQuotes(source: String,
+  func fetchQuotes(_ amount: Double,
+                   _ source: String,
                    success: @escaping(_ status: Bool) -> Void,
                    failure: @escaping(_ errorMessage: String) -> Void) {
+    // Validate amount
+    if !Validator.validateAmount(amount) {
+      failure(AppConstants.invalidAmount)
+    }
+    
     if let data = FileHandler.shared.readFile(source),
        !isTimeExceed(source) {
       self.parseResponse(source, data) { (response) in
