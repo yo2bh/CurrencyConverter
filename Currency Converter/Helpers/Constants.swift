@@ -34,9 +34,11 @@ struct AppConstants {
   
   // MARK: - Other Strings
   static let networkInit = "Init Network Manager"
+  static let fileManagerInit = "Init File Manager"
   static let applicationJson = "Application/json"
   static let contentType = "Content-Type"
   static let othersString = "Other Currency"
   static let otherDetailString = "Enter other currency for conversion"
   static let okButtonTitle = "Ok"
+  static let txtExtension = ".txt"
 }

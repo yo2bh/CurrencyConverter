@@ -26,6 +26,7 @@
 		D176D17E26DCAE2000D4DE74 /* CurrencyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176D17D26DCAE2000D4DE74 /* CurrencyListViewModel.swift */; };
 		D189036226DCCA6500FC12E5 /* ListedCurrencyConverterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D189036126DCCA6500FC12E5 /* ListedCurrencyConverterVC.swift */; };
 		D189036A26DCCAD200FC12E5 /* UnlistedCurrencyConverterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D189036926DCCAD200FC12E5 /* UnlistedCurrencyConverterVC.swift */; };
+		D1E60CD926E0E42600F4E33C /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E60CD826E0E42600F4E33C /* FileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		D176D17D26DCAE2000D4DE74 /* CurrencyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewModel.swift; sourceTree = "<group>"; };
 		D189036126DCCA6500FC12E5 /* ListedCurrencyConverterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedCurrencyConverterVC.swift; sourceTree = "<group>"; };
 		D189036926DCCAD200FC12E5 /* UnlistedCurrencyConverterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlistedCurrencyConverterVC.swift; sourceTree = "<group>"; };
+		D1E60CD826E0E42600F4E33C /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 				3ABBB5D226DC9B9600D585CC /* Constants.swift */,
 				3ABBB5D726DC9BC200D585CC /* ActivityIndicator.swift */,
 				3ABBB5DC26DC9BD800D585CC /* AlertView.swift */,
+				D1E60CD826E0E42600F4E33C /* FileManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1E60CD926E0E42600F4E33C /* FileManager.swift in Sources */,
 				3ABBB58826DC97DB00D585CC /* CurrencyListViewController.swift in Sources */,
 				3ABBB58E26DC97DB00D585CC /* Currency_Converter.xcdatamodeld in Sources */,
 				3ABBB5CB26DC9B8100D585CC /* NetworkManager.swift in Sources */,

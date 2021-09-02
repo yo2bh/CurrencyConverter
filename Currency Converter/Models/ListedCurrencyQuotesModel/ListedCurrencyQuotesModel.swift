@@ -9,5 +9,6 @@ import Foundation
 
 struct ListedCurrencyQuotesModel: Decodable {
   var success: Bool
+  var source: String
   var quotes: [String: Double]
 }
