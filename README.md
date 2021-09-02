@@ -11,12 +11,12 @@ This is iOS Currency Converter App where Exchange rates are fetched from: https:
 6. **Handled all possible errors**
 
 # Completed below functional requirements
-1. Exchange rates are fetched from: https://currencylayer.com/documentation
+1. Exchange rates are fetched from: https://currencylayer.com/documentation.
 2. Used free API Access Key for using the API.
-3. User isable to select a currency from a list of currencies provided by the API.
-4. User is able to enter desired amount for selected currency.
-5. User is able to see a list of exchange rates for the selected currency from available currency list.
-6. Rates is persisted locally in file and refreshed after every 30 minutes.
+3. Users are able to select a currency from a list of currencies provided by the API.
+4. The User is able to enter the desired amount for selected currency.
+5. The User is able to see a list of exchange rates for the selected currency from the available currency list.
+6. Rates are persisted locally in file and refreshed after every 30 minutes.
 7. Written the unit test cases.
 
 # Application Flow
